@@ -1,0 +1,41 @@
+[
+    {
+        "model": "app_api.mood",
+        "pk": 1,
+        "fields": {
+            "mood": "Angry"
+        }
+    },
+    {
+        "model": "app_api.mood",
+        "pk": 2,
+        "fields": {
+        
+            "mood": "Sad"
+        }
+    },
+    {
+        "model": "app_api.mood",
+        "pk": 3,
+        "fields": {
+        
+            "mood": "Discouraged"
+        }
+    },
+    {
+        "model": "app_api.mood",
+        "pk": 4,
+        "fields": {
+            
+            "mood": "Happy"
+        }
+    },
+    {
+        "model": "app_api.mood",
+        "pk": 5,
+        "fields": {
+            
+            "mood": "Afraid"
+        }
+    }
+]

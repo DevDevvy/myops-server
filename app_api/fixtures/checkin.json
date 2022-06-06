@@ -1,0 +1,135 @@
+[
+    {
+        "model": "app_api.checkin",
+        "pk": 1,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-01",
+            "mood_score": 10,
+            "self_talk": 3,
+            "sleep_quality": 5,
+            "coping_strategies": 6,
+            "productivity": 1,
+            "work_time": 20,
+            "break_time": 17,
+            "personal_time": 17,
+            "sleep_time": 9,
+            "learning_time": 17,
+            "exercise_time": 18
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 2,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-02",
+            "mood_score": 6,
+            "self_talk": 5,
+            "sleep_quality": 2,
+            "coping_strategies": 5,
+            "productivity": 2,
+            "work_time": 24,
+            "break_time": 14,
+            "personal_time": 21,
+            "sleep_time": 0,
+            "learning_time": 16,
+            "exercise_time": 19
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 3,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-03",
+            "mood_score": 3,
+            "self_talk": 10,
+            "sleep_quality": 10,
+            "coping_strategies": 3,
+            "productivity": 1,
+            "work_time": 20,
+            "break_time": 15,
+            "personal_time": 23,
+            "sleep_time": 6,
+            "learning_time": 21,
+            "exercise_time": 0
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 4,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-04",
+            "mood_score": 3,
+            "self_talk": 8,
+            "sleep_quality": 9,
+            "coping_strategies": 8,
+            "productivity": 2,
+            "work_time": 1,
+            "break_time": 23,
+            "personal_time": 24,
+            "sleep_time": 9,
+            "learning_time": 17,
+            "exercise_time": 22
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 5,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-05",
+            "mood_score": 4,
+            "self_talk": 1,
+            "sleep_quality": 4,
+            "coping_strategies": 5,
+            "productivity": 10,
+            "work_time": 24,
+            "break_time": 3,
+            "personal_time": 12,
+            "sleep_time": 15,
+            "learning_time": 5,
+            "exercise_time": 4
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 6,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-06",
+            "mood_score": 8,
+            "self_talk": 6,
+            "sleep_quality": 10,
+            "coping_strategies": 4,
+            "productivity": 5,
+            "work_time": 5,
+            "break_time": 10,
+            "personal_time": 0,
+            "sleep_time": 4,
+            "learning_time": 2,
+            "exercise_time": 6
+        }
+    },
+    {
+        "model": "app_api.checkin",
+        "pk": 7,
+        "fields": {
+            "user_id": 1,
+            "date": "2011-09-07",
+            "mood_score": 6,
+            "self_talk": 9,
+            "sleep_quality": 9,
+            "coping_strategies": 5,
+            "productivity": 7,
+            "work_time": 21,
+            "break_time": 22,
+            "personal_time": 5,
+            "sleep_time": 6,
+            "learning_time": 5,
+            "exercise_time": 23
+        }
+    }
+]

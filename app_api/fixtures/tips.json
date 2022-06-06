@@ -1,0 +1,38 @@
+[
+    {
+        "model": "app_api.tip",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "mood": 2,
+            "tip": "Take short breaks"
+        }
+    },
+    {
+        "model": "app_api.tip",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "mood": 1,
+            "tip": "Take deep breaths"
+        }
+    },
+    {
+        "model": "app_api.tip",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "mood": 2,
+            "tip": "Take a walk"
+        }
+    },
+    {
+        "model": "app_api.tip",
+        "pk": 4,
+        "fields": {
+            "user": 1,
+            "mood": 3,
+            "tip": "Remember where you came from"
+        }
+    }
+]

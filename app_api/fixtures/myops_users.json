@@ -1,0 +1,10 @@
+[
+    {
+        "model": "app_api.MyOpsUser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "Me"
+        }
+    }
+]
