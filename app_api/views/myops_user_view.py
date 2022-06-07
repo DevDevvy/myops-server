@@ -2,9 +2,10 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from app_api.models.myops_user import MyOpsUser
 
+from app_api.models.user import MyOpsUser
 
+# gets user logged in at /currentuser
 class MyOpsUserView(ViewSet):
     """MyOps User view"""
     
@@ -24,6 +25,6 @@ class MyOpsUserSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = MyOpsUser
-        fields = ('id', 'user_id', 'user_photo')
+        fields = ('id', 'user_id')
         depth = 1
         

@@ -3,7 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from app_api.models.tip import Tip
-from app_api.models.myops_user import MyOpsUser
+from app_api.models.user import MyOpsUser
 
 class TipView(ViewSet):
     """Tips view"""
