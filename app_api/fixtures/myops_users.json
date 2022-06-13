@@ -3,8 +3,11 @@
         "model": "app_api.MyOpsUser",
         "pk": 1,
         "fields": {
-            "user": 1,
-            "bio": "Me"
+            "user_id": 1,
+            "bio": "Me",
+            "username": "Me",
+            "first_name": "Myself",
+            "last_name": "Andeye"
         }
     }
 ]

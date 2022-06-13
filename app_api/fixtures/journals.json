@@ -1,0 +1,24 @@
+[
+    {
+        "model": "app_api.journal",
+        "pk": 1,
+        "fields": {
+            "user_id": 1,
+            "date": "2020-07-29T13:25:27.172Z",
+            "mood_id": 1,
+            "title": "Sleeeeepy",
+            "content": "Sometimes I feel like I can't get enough sleep."
+        }
+    },
+    {
+        "model": "app_api.journal",
+        "pk": 2,
+        "fields": {
+            "user_id": 2,
+            "date": "2020-08-29T13:24:27.172Z",
+            "mood_id": 2,
+            "title": "Pennies for everyone",
+            "content": "Today I found a bucket full of pennies and it made me ponder the value of life"
+        }
+    }
+]

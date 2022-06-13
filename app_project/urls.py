@@ -18,6 +18,8 @@ from django.contrib import admin
 from rest_framework import routers
 from django.urls import include, path
 from app_api.views import register_user, login_user
+from app_api.views.checkin_view import CheckInView
+from app_api.views.journal_view import JournalView
 from app_api.views.mood_view import MoodView
 from app_api.views.myops_user_view import MyOpsUserView
 from app_api.views.tip_view import TipView
@@ -28,6 +30,8 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'tips', TipView, 'tip')
 router.register(r'currentuser', MyOpsUserView, 'ops')
 router.register(r'moods', MoodView, 'mood')
+router.register(r'checkin', CheckInView, 'check')
+router.register(r'journals', JournalView, 'journal')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

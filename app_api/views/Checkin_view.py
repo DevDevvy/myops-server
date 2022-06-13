@@ -1,0 +1,88 @@
+from django.http import HttpResponseServerError
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+from rest_framework import serializers, status
+from app_api.models.checkin import CheckIn
+from app_api.models.tip import Tip
+from app_api.models.user import MyOpsUser
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.decorators import action
+from app_api.models.favorite import Favorite
+
+class CheckInView(ViewSet):
+    """Check-in view"""
+
+    def retrieve(self, request, pk):
+        """Handle GET requests for single tip
+
+        Returns:
+            Response -- JSON serialized tip
+        """
+        try:
+            checkin = CheckIn.objects.get(pk=pk)
+            serializer = CheckInSerializer(checkin)
+            return Response(serializer.data)
+        except CheckIn.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND) 
+
+    # create a new checkin
+    def create(self, request):
+        """Handle POST operations
+
+        Returns:
+            Response -- JSON serialized game instance
+        """
+        user = MyOpsUser.objects.get(user=request.auth.user)
+        serializer = CreateCheckInSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=user)
+    
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    # list handles queries
+    def list(self, request):
+        """Handle GET requests to get all checkins
+
+        Returns:
+            Response -- JSON serialized list of checkins
+        """
+        user = MyOpsUser.objects.get(user=request.auth.user)
+        checkin = CheckIn.objects.filter(user=user).order_by('-date')[:14:-1]
+        serializer = CheckInSerializer(checkin, many=True)
+        return Response(serializer.data)
+    
+    # added validation 
+    def update(self, request, pk):
+        """Handle PUT requests for a checkin
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        checkin = CheckIn.objects.get(pk=pk)
+        serializer = CreateCheckInSerializer(checkin, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    def destroy(self, request, pk):
+        checkin = CheckIn.objects.get(pk=pk)
+        checkin.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        
+   
+
+class CheckInSerializer(serializers.ModelSerializer):
+    """JSON serializer for checkin types
+    """
+    class Meta:
+        model = CheckIn
+        fields = ('id', 'date', 'mood_score', 'self_talk', 'sleep_quality', 'coping_strategies', 'productivity', 'work_time', 'break_time', 'sleep_time', 'personal_time', 'learning_time', 'exercise_time', 'user_id')
+        depth = 1
+        
+# validates and saves new checkin
+class CreateCheckInSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CheckIn
+        fields = ['mood_score', 'self_talk', 'sleep_quality', 'coping_strategies', 'productivity', 'work_time', 'break_time', 'sleep_time', 'personal_time', 'learning_time', 'exercise_time']
