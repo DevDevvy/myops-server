@@ -20,5 +20,16 @@
             "title": "Pennies for everyone",
             "content": "Today I found a bucket full of pennies and it made me ponder the value of life"
         }
+    },
+    {
+        "model": "app_api.journal",
+        "pk": 3,
+        "fields": {
+            "user_id": 1,
+            "date": "2020-09-29T13:24:27.172Z",
+            "mood_id": 4,
+            "title": "Pennies for everyone",
+            "content": "Today I found a bucket full of pennies and it made me ponder the value of life"
+        }
     }
 ]
