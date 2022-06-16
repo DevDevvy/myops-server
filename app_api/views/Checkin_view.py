@@ -49,7 +49,11 @@ class CheckInView(ViewSet):
             Response -- JSON serialized list of checkins
         """
         user = MyOpsUser.objects.get(user=request.auth.user)
-        checkin = CheckIn.objects.filter(user=user).order_by('-date')[:14:-1]
+        days = request.query_params.get('days', None)
+        if days is not None:
+            checkin = CheckIn.objects.filter(user=user).order_by('-date')[:int(days):-1]
+        else:
+            checkin = CheckIn.objects.filter(user=user).order_by('-date')[:7:-1]
         serializer = CheckInSerializer(checkin, many=True)
         return Response(serializer.data)
     

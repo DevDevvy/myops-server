@@ -37,5 +37,13 @@
             
             "mood": "Afraid"
         }
+    },
+    {
+        "model": "app_api.mood",
+        "pk": 6,
+        "fields": {
+            
+            "mood": "Encouraged"
+        }
     }
 ]
