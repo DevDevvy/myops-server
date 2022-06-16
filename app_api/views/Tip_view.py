@@ -113,11 +113,11 @@ class TipSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Tip
-        fields = ('id', 'tip', 'mood', 'user_id')
+        fields = ('id', 'tip', 'mood', 'user_id', 'public')
         depth = 1
 
 # validates and saves new tip
 class CreateTipSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tip
-        fields = ['tip', 'mood']
+        fields = ['tip', 'mood', 'public']
