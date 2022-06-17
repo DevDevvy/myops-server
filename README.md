@@ -23,7 +23,7 @@
 <h3 align="center">MyOps</h3>
 
   <p align="center">
-    Personal Tracking and Data Visualization
+    Personal Tracking and Data Visualization for the professional who wants to optimize life and work. See how your sleep, exercise and other factors affect your productivity and mood.
     <br />
     <a href="https://github.com/devdevvy/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -71,7 +71,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-In an increasingly isolating digital world, the need to keep tabs on our personal well being is becoming ever more prevalent. 
+   In an increasingly isolating digital world, the need to keep tabs on our personal well being is becoming ever more prevalent. 
     <br/>
     This holds especially true for professionals like software developers who are often workig in a solitary environment. 
     MyOps allows users to track their own personal data in order to identify and track trends related to sleep, mood, and productivity among other things. 
