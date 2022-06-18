@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/devdevvy/myops-server">
-    <img src="https://github.com/devdevvy/myops-client/public/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://imgur.com/UsFC6hJ" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">MyOps</h3>
