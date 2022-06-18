@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/devdevvy/myops-server">
-    <img src="https://raw.githubusercontent.com/DevDevvy/myops-client/9e53728d2fd3418a361f2d87857eda67addb79b0/public/logo.svg" alt="Logo" width="300" height="auto">
+    <img src="https://raw.githubusercontent.com/DevDevvy/myops-client/67f34c24f7a51e9b894e4044857cb49458fc26d9/public/logo.svg" alt="Logo" width="300" height="auto">
     
   </a>
   <hr/>
