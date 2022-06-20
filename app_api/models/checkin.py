@@ -16,3 +16,11 @@ class CheckIn(models.Model):
     sleep_time = models.FloatField(default=0,validators=[MaxValueValidator(24),MinValueValidator(0)])
     learning_time = models.FloatField(default=0,validators=[MaxValueValidator(24),MinValueValidator(0)])
     exercise_time = models.FloatField(default=0,validators=[MaxValueValidator(24),MinValueValidator(0)])
+    
+    @property
+    def journal(self):
+        return self.__journal
+    
+    @journal.setter
+    def journal(self, value):
+        self.__journal = value
