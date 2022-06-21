@@ -7,7 +7,6 @@ from app_api.models.user import MyOpsUser
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from app_api.models.favorite import Favorite
 
 class JournalView(ViewSet):
     """Journals view"""
