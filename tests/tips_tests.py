@@ -3,7 +3,7 @@ from rest_framework.test import APITestCase
 from rest_framework.authtoken.models import Token
 from app_api.models.tip import Tip
 from app_api.models.user import MyOpsUser
-from app_api.views.tip_view import CreateTipSerializer
+from app_api.views.Tip_view import CreateTipSerializer
 
 
 class TipsTests(APITestCase):

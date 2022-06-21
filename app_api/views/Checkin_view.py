@@ -8,7 +8,7 @@ from app_api.models.user import MyOpsUser
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from app_api.views.journal_view import JournalSerializer
+from app_api.views.Journal_view import JournalSerializer
 
 class CheckInView(ViewSet):
     """Check-in view"""
