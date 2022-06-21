@@ -4,7 +4,7 @@ from rest_framework.authtoken.models import Token
 from app_api.models.checkin import CheckIn
 
 from app_api.models.user import MyOpsUser
-from app_api.views.checkin_view import CheckInSerializer, CreateCheckInSerializer
+from app_api.views.Checkin_view import CheckInSerializer, CreateCheckInSerializer
 
 
 class CheckInTests(APITestCase):

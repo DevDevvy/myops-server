@@ -2,11 +2,8 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from app_api.models.favorite import Favorite
-from django.contrib.auth.models import User
 from app_api.models.user import MyOpsUser
-from app_api.views.favorite_view import FavoriteSerializer
-from app_api.views.tip_view import TipSerializer
+from app_api.views.Tip_view import TipSerializer
 
 # gets user logged in at /currentuser
 class MyOpsUserView(ViewSet):
