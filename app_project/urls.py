@@ -33,6 +33,7 @@ router.register(r'moods', MoodView, 'mood')
 router.register(r'checkin', CheckInView, 'check')
 router.register(r'journals', JournalView, 'journal')
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register_user),
