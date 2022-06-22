@@ -36,7 +36,7 @@ class TipView(ViewSet):
         user = MyOpsUser.objects.get(user=request.auth.user)
         serializer = CreateTipSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=user.user_id)
+        serializer.save(user=request.auth.user.id)
     
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
