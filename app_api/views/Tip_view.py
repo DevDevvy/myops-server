@@ -73,7 +73,7 @@ class TipView(ViewSet):
         tip = Tip.objects.get(pk=pk)
         serializer = CreateTipSerializer(tip, data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=user)
+        serializer.save(user=user.user_id)
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
