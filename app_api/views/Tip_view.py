@@ -36,7 +36,7 @@ class TipView(ViewSet):
         user = MyOpsUser.objects.get(user=request.auth.user)
         serializer = CreateTipSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=request.auth.user)
+        serializer.save(user=user)
     
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
@@ -50,14 +50,12 @@ class TipView(ViewSet):
         
         # check if string is a query ie /tip?mood=1
         tip = Tip.objects.all()
-        user = request.auth.user
-        current_user = MyOpsUser.objects.get(user=user)
         mood = request.query_params.get('mood', None)
         user_id = request.query_params.get('user_id', None)
         if mood is not None:
             tip = tip.filter(mood_id=mood)
         elif user_id is not None:
-            tip = tip.filter(user_id=current_user.user_id)
+            tip = tip.filter(user_id=user_id)
         
         serializer = TipSerializer(tip, many=True)
         return Response(serializer.data)
@@ -73,7 +71,7 @@ class TipView(ViewSet):
         tip = Tip.objects.get(pk=pk)
         serializer = CreateTipSerializer(tip, data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=user.user_id)
+        serializer.save(user=user)
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
